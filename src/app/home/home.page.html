@@ -1,20 +1,29 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Cad NFC
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="container">
+    <div [formGroup]="forms" class="mb-3">
+      <label for="" class="form-label">Digite a informação da tag</label>
+      <input formControlName="infoTag" type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="ABC000" />
+    </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
+    <ion-button expand="block" (click)="cadNfc()" [disabled]="forms.invalid">Gravar</ion-button>
+
+    <ion-card *ngIf="responseTag">
+      <ion-card-content>
+          <h5>Dados da Tag</h5>
+          <h5><strong>Tag:</strong> {{responseTag}}</h5>
+        </ion-card-content>
+    </ion-card>
+
+
+  <!-- <h1>Ler Tag</h1> -->
+  <!-- <ion-button (click)="readTag()">Read</ion-button> -->
 </ion-content>

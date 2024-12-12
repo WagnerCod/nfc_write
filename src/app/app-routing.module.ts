@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'modal-cad-nfc',
+    loadChildren: () => import('./modal-cad-nfc/modal-cad-nfc.module').then( m => m.ModalCadNfcPageModule)
+  },
 ];
 
 @NgModule({
