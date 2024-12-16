@@ -56,7 +56,8 @@ Este aplicativo utiliza o plugin NFC para leitura, gravação, formatação e co
 1. Clone o repositório do projeto:
 
    ```bash
-   git clone <URL_DO_REPOSITORIO>
+   [<URL_DO_REPOSITORIO>](https://github.com/WagnerCod/nfc_write.git)
+   git clone 
    ```
 
 2. Navegue para o diretório do projeto:
